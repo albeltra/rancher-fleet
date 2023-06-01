@@ -27,22 +27,23 @@ spec:
             port:
               number: 80
       - backend:
-              service:
-                name: blog-internal
-                port:
-                  number: 80
-            path: /p/
-            pathType: Prefix
+          service:
+            name: blog-internal
+            port:
+              number: 80
+        path: /p/
+        pathType: Prefix
       - backend:
-              service:
-                name: blog-internal
-                port:
-                  number: 80
-            path: /ghost/api/content/
+          service:
+            name: blog-internal
+            port:
+              number: 80
+        path: /ghost/api/content/
+        pathType: Prefix
       - backend:
-              service:
-                name: blog-internal
-                port:
-                  number: 80
-            path: /about/
-            pathType: Exact
+          service:
+            name: blog-internal
+            port:
+              number: 80
+        path: /about/
+        pathType: Exact
