@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume
+spec:
+  selector:
+    matchLabels:
+      app: resume
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: resume
+    spec:
+      containers:
+      - name: resume
+        image: beltranalex928/resume:latest
+        ports:
+        - containerPort: 8000

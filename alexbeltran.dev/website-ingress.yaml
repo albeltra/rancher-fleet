@@ -12,6 +12,13 @@ spec:
   - host: alexbeltran.dev
     http:
       paths:
+      - path: /Alex-Beltran-Resume.pdf
+        pathType: Exact
+        backend:
+          service:
+            name: resume
+            port:
+              number: 8000
       - path: /
         pathType: Prefix
         backend:
