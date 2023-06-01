@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-static
+spec:
+  selector:
+    matchLabels:
+      app: blog-static
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: blog-static
+    spec:
+      containers:
+      - name: resume
+        image: beltranalex928/blog:latest
+        ports:
+        - containerPort: 80

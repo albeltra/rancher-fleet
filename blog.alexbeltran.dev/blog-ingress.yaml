@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: blog
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - blog.alexbeltran.dev
+    secretName: alexbeltran.dev
+  rules:
+  - host: blog.alexbeltran.dev
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: blog-static
+            port:
+              number: 80
+      - path: /content/images/
+        pathType: Prefix
+        backend:
+          service:
+            name: blog-static
+            port:
+              number: 80
