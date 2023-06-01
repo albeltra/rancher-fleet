@@ -26,3 +26,23 @@ spec:
             name: blog-static
             port:
               number: 80
+      - backend:
+              service:
+                name: blog-internal
+                port:
+                  number: 80
+            path: /p/
+            pathType: Prefix
+      - backend:
+              service:
+                name: blog-internal
+                port:
+                  number: 80
+            path: /ghost/api/content/
+      - backend:
+              service:
+                name: blog-internal
+                port:
+                  number: 80
+            path: /about/
+            pathType: Exact
