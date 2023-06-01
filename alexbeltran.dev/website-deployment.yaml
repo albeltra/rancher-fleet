@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: website
 spec:
+  template:
+    metadata:
+      labels:
+        app: website
   spec:
     affinity: {}
     containers:
