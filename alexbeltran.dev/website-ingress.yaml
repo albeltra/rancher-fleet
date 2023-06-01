@@ -19,8 +19,36 @@ spec:
             name: resume
             port:
               number: 8000
-      - path: /
+      - path: /ML-Antimicrobial-Stewardship.pdf
+        pathType: Exact
+        backend:
+          service:
+            name: resume
+            port:
+              number: 8000
+      - path: /Evaluating-Clinical-Prediction-Indices.pdf
+        pathType: Exact
+        backend:
+          service:
+            name: resume
+            port:
+              number: 8000
+      - path: /_next/
         pathType: Prefix
+        backend:
+          service:
+            name: website
+            port:
+              number: 80
+      - path: /images/
+        pathType: Prefix
+        backend:
+          service:
+            name: website
+            port:
+              number: 80
+      - path: /favicon.ico
+        pathType: Exact
         backend:
           service:
             name: website
