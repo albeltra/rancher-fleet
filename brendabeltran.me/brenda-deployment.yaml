@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brenda
+spec:
+  selector:
+    matchLabels:
+      app: brenda 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: brenda 
+    spec:
+      containers:
+      - name: node
+        image: beltranalex928/brenda:latest
+        ports:
+        - containerPort: 3000
