@@ -54,3 +54,10 @@ spec:
             name: website
             port:
               number: 80
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: website
+            port:
+              number: 80
