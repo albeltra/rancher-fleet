@@ -6,10 +6,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - https-alexbeltran.dev
+      - alexbeltran.dev
     secretName: alexbeltran.dev
   rules:
-  - host: https-alexbeltran.dev
+  - host: alexbeltran.dev
     http:
       paths:
       - path: /
