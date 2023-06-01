@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website
+spec:
+  spec:
+    affinity: {}
+    containers:
+      - image: beltranalex928/website
+        imagePullPolicy: Always
+        name: node
+        ports:
+          - containerPort: 80
+            name: website-node
+            protocol: TCP
