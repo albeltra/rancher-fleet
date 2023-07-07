@@ -11,7 +11,7 @@ imageScans:
       order: asc
 
   # specify images to scan
-  image: "beltranalex928/website"
+  image: beltranalex928/website
 
   # Specify the tag name, it has to be unique in the same bundle
   tagName: website-scan
@@ -28,7 +28,7 @@ imageScans:
       order: asc
 
   # specify images to scan
-  image: "beltranalex928/resume"
+  image: beltranalex928/resume
 
   # Specify the tag name, it has to be unique in the same bundle
   tagName: resume-scan
