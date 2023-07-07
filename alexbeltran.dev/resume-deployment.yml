@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: resume
-        image: {"$imagescan": "resume-scan"}
+        image: "beltranalex928/resume:resume-scan"
         ports:
         - containerPort: 8000
