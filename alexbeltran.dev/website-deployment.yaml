@@ -15,5 +15,6 @@ spec:
       containers:
       - name: node
         image: beltranalex928/website:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
