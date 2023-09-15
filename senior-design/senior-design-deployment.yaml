@@ -15,5 +15,6 @@ spec:
       containers:
       - name: nginx
         image: beltranalex928/senior-design:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
