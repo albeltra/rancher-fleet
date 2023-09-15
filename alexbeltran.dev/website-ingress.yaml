@@ -12,6 +12,13 @@ spec:
   - host: alexbeltran.dev
     http:
       paths:
+      - path: /senior-design/
+        pathType: Prefix
+        backend:
+          service:
+            name: senior-design
+            port:
+              number: 80
       - path: /Alex-Beltran-Resume.pdf
         pathType: Exact
         backend:

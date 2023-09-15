@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: senior-design
+spec:
+  selector:
+    matchLabels:
+      app: senior-design
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: senior-design
+    spec:
+      containers:
+      - name: nginx
+        image: beltranalex928/senior-design:latest
+        ports:
+        - containerPort: 80
