@@ -15,5 +15,6 @@ spec:
       containers:
       - name: resume
         image: beltranalex928/blog:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
