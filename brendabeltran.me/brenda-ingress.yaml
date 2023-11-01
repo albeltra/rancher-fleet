@@ -19,3 +19,10 @@ spec:
             name: brenda
             port:
               number: 4000
+      - path: /club-website
+        pathType: Prefix
+        backend:
+          service:
+            name: club-website
+            port:
+              number: 8000
