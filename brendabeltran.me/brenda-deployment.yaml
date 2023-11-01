@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: beltranalex928/brenda:latest
+        image: brendizzzle/website:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 3000
+        - containerPort: 4000
