@@ -10,4 +10,4 @@ spec:
   - port: 3000
     nodePort: 31013
   selector:
-    app: brenda-demo-frontend
+    app: brenda-demo
