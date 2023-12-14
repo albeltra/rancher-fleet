@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brenda-demo
+spec:
+  selector:
+    matchLabels:
+      app: brenda-demo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: brenda-demo
+    spec:
+      containers:
+      - name: frontend
+        image: beltranalex928/workwaves-frontend:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000

@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: brenda-demo
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - demo.brendabeltran.me
+    secretName: brendabeltran.me
+  rules:
+  - host: demo.brendabeltran.me
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: brenda-demo-frontend
+            port:
+              number: 3000
