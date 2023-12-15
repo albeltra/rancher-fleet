@@ -16,5 +16,11 @@ spec:
       - name: frontend
         image: beltranalex928/workwaves-backend:latest
         imagePullPolicy: Always
+        env:
+          - name: MONGO_URL
+            valueFrom:
+              secretKeyRef:
+                key: url          
+                name: workwaves-mongo
         ports:
         - containerPort: 2000
