@@ -12,6 +12,13 @@ spec:
   - host: demo.brendabeltran.me
     http:
       paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: brenda-demo-backend
+            port:
+              number: 2000
       - path: /
         pathType: Prefix
         backend:

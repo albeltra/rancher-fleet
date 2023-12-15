@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: brenda-demo-backend
+  labels:
+    app: brenda-demo-backend
+spec:
+  type: NodePort
+  ports:
+  - port: 2000
+    nodePort: 31014
+  selector:
+    app: brenda-demo-backend
