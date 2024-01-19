@@ -1,0 +1,20 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: tony
+spec:
+  selector:
+    matchLabels:
+      app: tony
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: tony
+    spec:
+      containers:
+      - name: node
+        image: beltranalex928/tony:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

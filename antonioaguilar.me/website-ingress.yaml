@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tony
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - antonioaguilar.me
+    secretName: antonioaguilar.me
+  rules:
+  - host: antonioaguilar.me
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: tony
+            port:
+              number: 80

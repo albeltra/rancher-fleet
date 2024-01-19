@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tony
+  labels:
+    app: tony
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    nodePort: 31015
+  selector:
+    app: tony
