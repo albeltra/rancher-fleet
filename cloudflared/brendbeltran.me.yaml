@@ -1,13 +1,12 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: cloudflared-brenda
 spec:
   selector:
     matchLabels:
       app: cloudflared-brenda
-  replicas: 2 # You could also consider elastic scaling for this deployment
   template:
     metadata:
       labels:
