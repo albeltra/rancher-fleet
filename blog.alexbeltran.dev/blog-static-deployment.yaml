@@ -15,5 +15,7 @@ spec:
       - name: resume
         image: beltranalex928/blog:latest
         imagePullPolicy: Always
+        imagePullSecrets:
+          - name: dockerhub
         ports:
         - containerPort: 80
