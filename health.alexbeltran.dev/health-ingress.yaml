@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: health
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - health.alexbeltran.dev
+    secretName: alexbeltran.dev
+  rules:
+  - host: health.alexbeltran.dev
+    http:
+      paths:
+      - path: /healthz
+        pathType: Exact
+        backend:
+          service:
+            name: ingress-nginx-controller-admission
+            port:
+              number: 80
