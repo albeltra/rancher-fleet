@@ -1,12 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: brenda-demo
 spec:
   selector:
     matchLabels:
       app: brenda-demo
-  replicas: 1
   template:
     metadata:
       labels:

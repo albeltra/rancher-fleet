@@ -1,12 +1,11 @@
 apiVersion: apps/v1 
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: tony
 spec:
   selector:
     matchLabels:
       app: tony
-  replicas: 3
   template:
     metadata:
       labels:

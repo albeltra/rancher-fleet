@@ -1,12 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: blog-static 
 spec:
   selector:
     matchLabels:
       app: blog-static
-  replicas: 3
   template:
     metadata:
       labels:
