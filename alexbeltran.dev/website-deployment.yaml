@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: beltranalex928/website:latest # {"$imagescan": "test-scan"}
+        image: beltranalex928/website:1.0.0 # {"$imagescan": "test-scan"}
         imagePullPolicy: Always
         ports:
         - containerPort: 80
