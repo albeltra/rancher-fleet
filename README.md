@@ -3,4 +3,4 @@ This repo contains manifests for a couple websites that I host. These are ingest
 
 This topologoy works great for stateless, static sites which were (in my experience) often impacted by etcd and Longhorn errors when deployed on a more traditional multi-node cluster with several etcd and worker nodes. 
 
-NOTE: I'M RETIRING THIS REPO BECAUSE IMAGE-SCAN ISN'T CURRENTLY COMPATIBLE WITH SSH KEYS AND GITHUB SUPPORT FOR HTTTPS AUTH IS POOR.
+NOTE: I'M RETIRING THIS REPO BECAUSE IMAGE-SCAN ISN'T CURRENTLY COMPATIBLE WITH SSH KEYS AND GITHUB SUPPORT FOR HTTPS AUTH IS POOR.
